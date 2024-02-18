@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.8.34511.84
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GA_QueueDoublyLinkedList_SSule", "GA_QueueDoublyLinkedList_SSule\GA_QueueDoublyLinkedList_SSule.csproj", "{A0A900A4-1ABA-41FC-B179-E711B833E9A1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A0A900A4-1ABA-41FC-B179-E711B833E9A1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A0A900A4-1ABA-41FC-B179-E711B833E9A1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A0A900A4-1ABA-41FC-B179-E711B833E9A1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A0A900A4-1ABA-41FC-B179-E711B833E9A1}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0539F239-CB13-40FD-BECB-F816E702B8A6}
+	EndGlobalSection
+EndGlobal
