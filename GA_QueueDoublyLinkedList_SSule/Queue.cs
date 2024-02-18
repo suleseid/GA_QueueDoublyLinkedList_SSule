@@ -6,20 +6,19 @@ using System.Threading.Tasks;
 
 namespace GA_QueueDoublyLinkedList_SSule
 {
-    // A generic stack class using a singly linked list
-    public class Stack<T>
+    internal class Queue<T>
     {
         // A nested class for individual nodes
-        public class StackNode<T>
+        public class QueueNode<T>
         {
             // The data stored in the node
             public T Data { get; set; }
             // The link to the next node
-            public StackNode<T> Next { get; set; }
-            public StackNode<T> Previous { get; set; }
+            public QueueNode<T> Next { get; set; }
+            public QueueNode<T> Previous { get; set; }
 
             // The constructor to initialize the node
-            public StackNode(T data)
+            public QueueNode(T data)
             {
                 Data = data;
                 Next = null;
@@ -27,23 +26,23 @@ namespace GA_QueueDoublyLinkedList_SSule
             }
         }
         // A field for the front and rear node
-        private StackNode<T> front;
-        private StackNode<T> rear;
+        private QueueNode<T> front;
+        private QueueNode<T> rear;
         // A public property for accessing the number of elements
         public int Count { get; private set; }
 
-        // A constructor to initialize the stack
-        public Stack()
+        // A constructor to initialize the Queue
+        public Queue()
         {
             front = null;
             rear = null;
             Count = 0;
         }
-        // A method to add an element to the top of the stack
+        // A method to add an element to the top of the queue
         public void Enqueue(T value)
         {
             // Create a new node with the given value
-            StackNode<T> newNode = new StackNode<T>(value);
+            QueueNode<T> newNode = new QueueNode<T>(value);
             // Lets link the new node to the new front and rear
             if (rear == null)
             {
@@ -59,7 +58,7 @@ namespace GA_QueueDoublyLinkedList_SSule
             // Increment the count
             Count++;
         }
-        // A method to remove and return the element from the top of the stack
+        // A method to remove and return the element from the top of the queue
         public T Dequeue()
         {
             // Check if the front stack is empty
@@ -72,7 +71,7 @@ namespace GA_QueueDoublyLinkedList_SSule
             T data = front.Data;
             // Move the top node to the next node
             front = front.Next;
-            if(front != null)
+            if (front != null)
             {
                 front.Previous = null;
             }
@@ -119,14 +118,14 @@ namespace GA_QueueDoublyLinkedList_SSule
             if (IsEmpty())
             {
                 // Print a message
-                Console.WriteLine("The stack is empty.");
+                Console.WriteLine("The queue is empty.");
             }
             else
             {
                 // Create a temporary node to traverse the stack
-                StackNode<T> temp = front;
+                QueueNode<T> temp = front;
                 // Print a message
-                Console.WriteLine("The elements in the stack are:");
+                Console.WriteLine("The elements in the queue are:");
                 // Loop until the end of the stack
                 while (temp != null)
                 {
@@ -137,8 +136,5 @@ namespace GA_QueueDoublyLinkedList_SSule
                 }
             }
         }
-
     }
-
 }
-

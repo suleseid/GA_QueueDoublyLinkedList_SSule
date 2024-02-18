@@ -10,27 +10,27 @@ namespace GA_QueueDoublyLinkedList_SSule
     {
         static void Main(string[] args)
         {
-            // Create a stack of integers
-            Stack<int> intstack = new Stack<int>();
+            // Create a queue of integers
+            Queue<int> intqueue = new Queue<int>();
             // Test the Equeue the method
-            intstack.Enqueue(10);
-            intstack.Enqueue(20);
-            intstack.Enqueue(30);
-            intstack.Enqueue(40);
-            intstack.Enqueue(50);
+            intqueue.Enqueue(10);
+            intqueue.Enqueue(20);
+            intqueue.Enqueue(30);
+            intqueue.Enqueue(40);
+            intqueue.Enqueue(50);
             // Test the display method
-            intstack.Display();
+            intqueue.Display();
             // Test the peek method
-            Console.WriteLine("The front element is: " + intstack.Peek());
+            Console.WriteLine("The front element is: " + intqueue.Peek());
             // Test the Dequeue method
-            Console.WriteLine("The dequeue element is: " + intstack.Dequeue());
-            Console.WriteLine("The dequeue element is: " + intstack.Dequeue());
+            Console.WriteLine("The dequeue element is: " + intqueue.Dequeue());
+            Console.WriteLine("The dequeue element is: " + intqueue.Dequeue());
             // Test the display method again
-            intstack.Display();
+            intqueue.Display();
             // Test the clear method
-            intstack.Clear();
+            intqueue.Clear();
             // Test the isEmpty method
-            Console.WriteLine("The stack is empty: " + intstack.IsEmpty());
+            Console.WriteLine("The queue is empty: " + intqueue.IsEmpty());
 
         }
     }
