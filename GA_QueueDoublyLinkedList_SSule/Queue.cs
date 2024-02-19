@@ -31,14 +31,14 @@ namespace GA_QueueDoublyLinkedList_SSule
         // A public property for accessing the number of elements
         public int Count { get; private set; }
 
-        // A constructor to initialize the Queue
+        // A constructor to initialize the queue
         public Queue()
         {
             front = null;
             rear = null;
             Count = 0;
         }
-        // A method to add an element to the top of the queue
+        // A method to add an element to the front and rear of the queue
         public void Enqueue(T value)
         {
             // Create a new node with the given value
@@ -58,7 +58,7 @@ namespace GA_QueueDoublyLinkedList_SSule
             // Increment the count
             Count++;
         }
-        // A method to remove and return the element from the top of the queue
+        // A method to remove and return the element from the top of the stack
         public T Dequeue()
         {
             // Check if the front stack is empty
@@ -69,7 +69,7 @@ namespace GA_QueueDoublyLinkedList_SSule
             }
             // Store the data of the front node
             T data = front.Data;
-            // Move the top node to the next node
+            // Move the front node to the next node
             front = front.Next;
             if (front != null)
             {
@@ -84,25 +84,25 @@ namespace GA_QueueDoublyLinkedList_SSule
             // Return the data
             return data;
         }
-        // A method to return the element at the top of the stack without removing it
+        // A method to return the element at the front of the queue without removing it
         public T Peek()
         {
             // Check if the stack is empty
             if (front == null)
             {
                 // Throw an exception
-                throw new InvalidOperationException("The stack is empty.");
+                throw new InvalidOperationException("The queue is empty.");
             }
-            // Return the data of the top node
+            // Return the data of the queue node
             return front.Data;
         }
-        // A method to check if the stack is empty
+        // A method to check if the queue is empty
         public bool IsEmpty()
         {
             // Return true if the front node is null, false otherwise
             return front == null;
         }
-        // A method to empty the stack
+        // A method to empty the queue
         public void Clear()
         {
             // Set the front and rear node to null
@@ -111,10 +111,10 @@ namespace GA_QueueDoublyLinkedList_SSule
             // Set the count to zero
             Count = 0;
         }
-        // A method to display the elements in the stack
+        // A method to display the elements in the queue
         public void Display()
         {
-            // Check if the stack is empty
+            // Check if the queue is empty
             if (IsEmpty())
             {
                 // Print a message
@@ -122,11 +122,11 @@ namespace GA_QueueDoublyLinkedList_SSule
             }
             else
             {
-                // Create a temporary node to traverse the stack
+                // Create a temporary node to traverse the queue
                 QueueNode<T> temp = front;
                 // Print a message
                 Console.WriteLine("The elements in the queue are:");
-                // Loop until the end of the stack
+                // Loop until the end of the queue
                 while (temp != null)
                 {
                     // Print the data of the current node
